@@ -32,12 +32,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="17dp"
-            android:layout_marginLeft="17dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@id/iv_photo_list_movie"
-            android:layout_toRightOf="@id/iv_photo_list_movie"
-            android:textColor="#fc035a"
+            android:textColor="#000000"
             android:textSize="16sp"
             android:textStyle="bold"
             tools:text="Mentor A" />
@@ -46,15 +44,59 @@
             android:id="@+id/tv_list_profession_mentors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_below="@id/tv_list_name_mentors"
+            android:layout_centerInParent="true"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_toEndOf="@id/iv_photo_list_movie"
-            android:maxLines="3"
             android:textColor="#4A9586"
-            tools:text="Aksi I"
-            tools:ignore="RtlCompat" />
+            tools:text="Profession" />
+
+        <TextView
+            android:id="@+id/tv_list_email_mentors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_list_profession_mentors"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_toEndOf="@id/iv_photo_list_movie"
+            android:textColor="#4A9586"
+            tools:text="Email" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_list_email_mentors"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/iv_photo_list_movie"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_mentors"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="#4D7902"/>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_mentors"
+                android:textColor="#FF0000"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+
+        </LinearLayout>
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

@@ -3,4 +3,6 @@
     <string name="mentor">MENTOR</string>
     <string name="english_course">ENGLISH COURSE</string>
     <string name="tambah_mentor">Tambah Mentor</string>
+    <string name="edit_mentors">Edit</string>
+    <string name="delete_mentors">Delete</string>
 </resources>
