@@ -1,15 +1,14 @@
-package com.example.tugas18
+package com.example.tugas18.view
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.create_mentors.*
+import com.example.tugas18.R
 
-class CreateMentorActivity : AppCompatActivity() {
+class EditMentorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.create_mentors)
-        title = "Tambah Mentor"
+        setContentView(R.layout.edit_mentors)
+        title = "Edit Mentor"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 

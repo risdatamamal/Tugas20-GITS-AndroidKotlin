@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tugas18">
-        <activity android:name=".CreateMentorActivity"></activity>
+        <activity android:name=".view.CreateMentorActivity"></activity>
+        <activity android:name=".view.EditMentorActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
