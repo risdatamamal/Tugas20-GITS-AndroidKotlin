@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tugas 18</string>
+    <string name="app_name">Tugas 20</string>
     <string name="mentor">MENTOR</string>
     <string name="english_course">ENGLISH COURSE</string>
     <string name="tambah_mentor">Tambah Mentor</string>
@@ -7,4 +7,19 @@
     <string name="delete_mentors">Delete</string>
     <string name="button_kembali">Button Kembali</string>
     <string name="button_back">Button Back</string>
+    <string name="signup">Sign Up</string>
+    <string name="create_account"><font color="#00ff00">Create Account</font></string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="full_name">Full Name</string>
+    <string name="address">Address</string>
+    <string name="number_phone">Number Phone</string>
+    <string name="register">Register</string>
+    <string name="back_to_login">I have account, Login</string>
+    <string name="go_to_register">I don\'t have account yet, Create One</string>
+    <string name="logo">LOGO</string>
+    <string name="lanjutkan">Continue</string>
+    <string name="go_register">I don\'t have account yet. Create One</string>
 </resources>

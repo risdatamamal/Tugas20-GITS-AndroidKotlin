@@ -13,8 +13,10 @@
         android:theme="@style/Theme.Tugas18">
         <activity android:name=".view.CreateMentorActivity"></activity>
         <activity android:name=".view.EditMentorActivity"></activity>
+        <activity android:name=".view.RegisterActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

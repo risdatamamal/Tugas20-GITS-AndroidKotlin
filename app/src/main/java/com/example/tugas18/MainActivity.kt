@@ -35,11 +35,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentCreateMentor)
         }
 
-//        btn_edit.setOnClickListener { view ->
-//            val intentEditMentor = Intent(this, EditMentorActivity::class.java)
-//            startActivity(intentEditMentor)
-//        }
-
         NetworkConfig().getService()
             .getMentorsList()
             .enqueue(object : Callback<MentorResponse> {
