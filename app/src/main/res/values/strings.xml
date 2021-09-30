@@ -22,4 +22,5 @@
     <string name="logo">LOGO</string>
     <string name="lanjutkan">Continue</string>
     <string name="go_register">I don\'t have account yet. Create One</string>
+    <string name="upload_image">Ambil Gambar</string>
 </resources>

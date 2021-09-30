@@ -21,15 +21,17 @@
             android:src="@mipmap/ic_launcher"
             tools:ignore="ImageContrastCheck" />
 
-        <TextView
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="@string/signup"
-            android:textSize="48sp"
-            android:textColor="@color/purple_700"
-            android:textStyle="bold"
+        <Button
+            android:id="@+id/btn_upload_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_button_primary"
+            android:clickable="true"
+            android:text="@string/upload_image"
+            android:textAllCaps="false" />
 
         <EditText
             android:id="@+id/registerName"
@@ -88,7 +90,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:textColor="#FFFFFF"
-            android:text="@string/lanjutkan"
+            android:text="@string/register"
             android:background="@drawable/bg_button_primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
