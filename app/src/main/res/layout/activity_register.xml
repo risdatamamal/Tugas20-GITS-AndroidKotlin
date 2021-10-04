@@ -1,109 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/colorBlue"
     tools:context=".view.RegisterActivity">
 
-    <LinearLayout
-        android:padding="16dp"
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-            android:contentDescription="@string/logo"
-            android:src="@mipmap/ic_launcher"
-            tools:ignore="ImageContrastCheck" />
-
-        <Button
-            android:id="@+id/btn_upload_image"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/bg_button_primary"
-            android:clickable="true"
-            android:text="@string/upload_image"
-            android:textAllCaps="false" />
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/registerName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="@string/full_name"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:minHeight="48dp" />
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back_white_24dp"
+                tools:ignore="VectorDrawableCompat" />
 
-        <EditText
-            android:id="@+id/registerHp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="@string/number_phone"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:minHeight="48dp"
-            tools:ignore="TextContrastCheck" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/register"
+                android:textColor="@color/colorWhiteGrey"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/registerEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="@string/email"
-            android:importantForAutofill="no"
-            android:inputType="textEmailAddress"
-            android:minHeight="48dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/full_name"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray" />
 
-        <EditText
-            android:id="@+id/registerPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="@string/password"
-            android:importantForAutofill="no"
-            android:inputType="textPassword"
-            android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/registerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/white"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorWhiteGrey"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-        <EditText
-            android:id="@+id/registerAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="@string/address"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:minHeight="48dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/profession"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray" />
 
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:textColor="#FFFFFF"
-            android:text="@string/register"
-            android:background="@drawable/bg_button_primary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/registerProfession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/white"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorWhiteGrey"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-        <TextView
-            android:id="@+id/textViewLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="@string/back_to_login"
-            android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/email"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray" />
 
-    </LinearLayout>
-</ScrollView>
+            <EditText
+                android:id="@+id/registerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/white"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorWhiteGrey"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/password"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray" />
+
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/white"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorWhiteGrey"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="@string/lanjutkan"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

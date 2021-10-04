@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun initRegisterTextView() {
         textViewRegister = findViewById(R.id.textViewRegister)
-        textViewRegister.text = fromHtml("<font color='#000000'>I don't have account yet. </font><font color='#0c0099'>Create One</font>")
+        textViewRegister.text = fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#ffffff'>Register</font>")
 
         textViewRegister.setOnClickListener {
             intent = Intent(this, RegisterActivity::class.java)

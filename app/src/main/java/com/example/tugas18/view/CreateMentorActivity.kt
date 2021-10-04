@@ -8,7 +8,6 @@ import com.example.tugas18.R
 import com.example.tugas18.adapter.MentorsAdapter
 import com.example.tugas18.model.MentorResponse
 import com.example.tugas18.service.NetworkConfig
-import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,9 +26,9 @@ class CreateMentorActivity : AppCompatActivity() {
                     call: Call<MentorResponse>,
                     response: Response<MentorResponse>
                 ) {
-                    rv_mentors.layoutManager = LinearLayoutManager(this@CreateMentorActivity)
-                    val listMentorsAdapter = MentorsAdapter(response.body()!!.mentors)
-                    rv_mentors.adapter = listMentorsAdapter
+//                    rv_mentors.layoutManager = LinearLayoutManager(this@CreateMentorActivity)
+//                    val listMentorsAdapter = MentorsAdapter(response.body()!!.mentors)
+//                    rv_mentors.adapter = listMentorsAdapter
                 }
 
                 override fun onFailure(call: Call<MentorResponse>, t: Throwable) {

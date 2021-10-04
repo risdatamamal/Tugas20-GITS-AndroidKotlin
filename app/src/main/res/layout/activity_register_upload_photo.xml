@@ -1,0 +1,86 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlue"
+    tools:context=".view.RegisterActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/upload_image"
+        android:textColor="@color/colorWhiteGrey"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/selamat_datang"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_button_primary"
+        android:text="@string/lewati_perkenalan"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_button_primary"
+        android:text="@string/simpan_lanjutkan"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_pic" />
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+        app:layout_constraintEnd_toEndOf="@+id/iv_profile"
+        app:srcCompat="@drawable/ic_btn_upload"
+        tools:ignore="VectorDrawableCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

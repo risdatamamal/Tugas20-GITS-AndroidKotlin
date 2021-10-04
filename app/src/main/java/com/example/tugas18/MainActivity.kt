@@ -1,20 +1,13 @@
 package com.example.tugas18
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tugas18.adapter.MentorsAdapter
 import com.example.tugas18.model.MentorResponse
 import com.example.tugas18.service.NetworkConfig
-import com.example.tugas18.view.CreateMentorActivity
-import com.example.tugas18.view.EditMentorActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.list_mentors.*
-import kotlinx.android.synthetic.main.list_mentors.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,11 +22,6 @@ class MainActivity : AppCompatActivity() {
 
         rv_mentors = findViewById(R.id.rv_mentors)
         rv_mentors.setHasFixedSize(true)
-
-        btn_create.setOnClickListener { view ->
-            val intentCreateMentor = Intent(this, CreateMentorActivity::class.java)
-            startActivity(intentCreateMentor)
-        }
 
         NetworkConfig().getService()
             .getMentorsList()
