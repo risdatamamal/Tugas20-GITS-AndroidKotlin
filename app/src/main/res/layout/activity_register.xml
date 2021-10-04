@@ -54,7 +54,7 @@
                 android:textColor="@android:color/darker_gray" />
 
             <EditText
-                android:id="@+id/registerName"
+                android:id="@+id/et_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -78,7 +78,7 @@
                 android:textColor="@android:color/darker_gray" />
 
             <EditText
-                android:id="@+id/registerProfession"
+                android:id="@+id/et_profession"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -102,7 +102,7 @@
                 android:textColor="@android:color/darker_gray" />
 
             <EditText
-                android:id="@+id/registerEmail"
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -126,7 +126,7 @@
                 android:textColor="@android:color/darker_gray" />
 
             <EditText
-                android:id="@+id/registerPassword"
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
