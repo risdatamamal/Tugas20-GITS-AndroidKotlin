@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "974717920711",
+    "project_id": "englishlearner-2aac0",
+    "storage_bucket": "englishlearner-2aac0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974717920711:android:bcc46923912e7fc09d25e2",
+        "android_client_info": {
+          "package_name": "com.example.tugas18"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974717920711-k4fsur6al0h3gvi7tlvrfamlu5i5jtu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsp0nChnDpSljQ1VuExCPsRECYxWcPYhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974717920711-k4fsur6al0h3gvi7tlvrfamlu5i5jtu7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

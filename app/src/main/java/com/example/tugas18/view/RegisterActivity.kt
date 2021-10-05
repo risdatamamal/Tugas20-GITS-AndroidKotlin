@@ -26,7 +26,7 @@ class RegisterActivity : AppCompatActivity() {
         initButtonBack()
         initButtonContinue()
 
-        preferences = com.example.tugas18.utils.Preferences(this)
+        preferences = Preferences(this)
     }
 
     private fun initButtonContinue() {
