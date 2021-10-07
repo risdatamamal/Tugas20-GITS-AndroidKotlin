@@ -5,9 +5,11 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
+import com.example.tugas18.MainActivity
 import com.example.tugas18.R
 import com.example.tugas18.view.LoginActivity
 import com.google.firebase.messaging.FirebaseMessagingService
@@ -18,6 +20,18 @@ const val channelName = "com.example.tugas18"
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
+    companion object {
+        var sharedPref: SharedPreferences? = null
+
+        var token: String?
+            get() {
+                return sharedPref?.getString("token", "")
+            }
+            set(value) {
+                sharedPref?.edit()?.putString("token", value)?.apply()
+            }
+    }
+
     // show the notification
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         if (remoteMessage.getNotification() != null) {
@@ -27,7 +41,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     // generate the notification
     private fun generateNotification(title: String, message: String) {
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT)

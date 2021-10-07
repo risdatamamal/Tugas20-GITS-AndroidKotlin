@@ -30,8 +30,10 @@
 
         <activity android:name=".view.RegisterActivity"></activity>
         <activity android:name=".view.RegisterUploadPhotoActivity"></activity>
+        <activity android:name=".view.LoginActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity
-            android:name=".view.LoginActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
