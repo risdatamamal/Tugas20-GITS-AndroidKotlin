@@ -34,9 +34,11 @@ class MainActivity : AppCompatActivity() {
         FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
 
         btn_send.setOnClickListener {
+
             val title = edt_title.text.toString()
             val message = edt_message.text.toString()
             val recipientToken = edt_token.text.toString()
+
             if(title.isNotEmpty() && message.isNotEmpty() && recipientToken.isNotEmpty()) {
                 PushNotification(
                     NotificationData(title, message),
