@@ -1,15 +1,17 @@
 package com.example.tugas18
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.tugas18.service.notification.MyFirebaseMessagingService
 import com.example.tugas18.service.notification.NotificationData
 import com.example.tugas18.service.notification.PushNotification
 import com.example.tugas18.service.notification.RetrofitInstanceNotification
+import com.google.firebase.installations.FirebaseInstallations
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -22,11 +24,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         MyFirebaseMessagingService.sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
-        FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {
-            MyFirebaseMessagingService.token = it.token
-            edt_token.setText(it.token)
+        FirebaseInstallations.getInstance().id.addOnSuccessListener {
+//            MyFirebaseMessagingService.token = it.token
+//            edt_token.setText(it.token)
         }
+
         FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
 
         btn_send.setOnClickListener {

@@ -32,9 +32,15 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             }
     }
 
+    // New Token
+    override fun onNewToken(newToken: String) {
+        super.onNewToken(newToken)
+        token = newToken
+    }
+
     // show the notification
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
-        if (remoteMessage.getNotification() != null) {
+        if (remoteMessage.notification != null) {
             generateNotification(remoteMessage.notification!!.title!!, remoteMessage.notification!!.body!!)
         }
     }
