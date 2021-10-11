@@ -36,9 +36,9 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
-        <activity android:name=".view.RegisterActivity" />
-        <activity android:name=".view.RegisterUploadPhotoActivity" />
-        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.RegisterUploadPhotoActivity" />
+        <activity android:name=".activity.LoginActivity" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".SplashScreenActivity"

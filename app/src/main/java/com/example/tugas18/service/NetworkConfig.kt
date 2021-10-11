@@ -9,10 +9,10 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.PUT
 
-class NetworkConfig {
+object NetworkConfig {
 
     // set interceptor
-    private fun getInterceptor(): OkHttpClient {
+    fun getInterceptor(): OkHttpClient {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
         return OkHttpClient.Builder()
@@ -20,17 +20,17 @@ class NetworkConfig {
             .build()
     }
 
-    private fun getRetrofit() : Retrofit {
+    fun getRetrofit() : Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://localhost:3000/")
+            .baseUrl("http://192.168.201.86:3000/")
             .client(getInterceptor())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 
-    fun getService(): Users = getRetrofit().create(Users::class.java)
+    fun serviceUser() = getRetrofit().create(RegisterService::class.java)
 
-    interface Users {
+    /*interface Users {
         @POST("users/register")
         fun postRegisterUser(): UserResponse
 
@@ -45,5 +45,5 @@ class NetworkConfig {
 
         @POST("users/logout")
         fun postLogoutUser(): UserResponse
-    }
+    }*/
 }
