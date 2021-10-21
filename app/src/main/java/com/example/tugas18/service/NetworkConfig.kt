@@ -12,7 +12,7 @@ import retrofit2.http.PUT
 object NetworkConfig {
 
     // set interceptor
-    fun getInterceptor(): OkHttpClient {
+    private fun getInterceptor(): OkHttpClient {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
         return OkHttpClient.Builder()
@@ -20,15 +20,20 @@ object NetworkConfig {
             .build()
     }
 
-    fun getRetrofit() : Retrofit {
+    private fun getRetrofit() : Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://192.168.201.86:3000/")
+            .baseUrl("http://192.168.18.10:3000/")
             .client(getInterceptor())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 
-    fun serviceUser() = getRetrofit().create(RegisterService::class.java)
+    // Service Register
+    fun serviceUserRegister(): RegisterService = getRetrofit().create(RegisterService::class.java)
+
+    // Service Login
+    fun serviceUserLogin(): LoginService = getRetrofit().create(LoginService::class.java)
+
 
     /*interface Users {
         @POST("users/register")
